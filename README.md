@@ -1,6 +1,6 @@
 # trab1-SB
 
-Trabalho 1 de Software Básico - 2017/2
+Trabalho 2 de Software Básico - 2017/2 - UnB
 
 Grupo:
 * Thúlio Noslen Silva Santos - 14/0164090
