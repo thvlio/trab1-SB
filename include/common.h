@@ -41,17 +41,27 @@ int errorCheck (int argc, char *argv[], std::string instrFileName, std::string d
     }
     
     // verifica se as extensao do arquivo de entrada eh .asm
-    std::string inExt = inFileName.substr(inFileName.size() - 4);
-    if (inExt != ".asm") {
+    if (inFileName.size() < 5) {
         std::cout << "Extensão do arquivo de entrada não suportada (somente .asm)" << "\n";
         return -1;
+    } else {
+        std::string inExt = inFileName.substr(inFileName.size() - 4);
+        if (inExt != ".asm") {
+            std::cout << "Extensão do arquivo de entrada não suportada (somente .asm)" << "\n";
+            return -1;
+        }
     }
     
     // verifica se as extensao do arquivo de saida eh .o
-    std::string outExt = outFileName.substr(outFileName.size() - 2);
-    if (outExt != ".o") {
+    if (outFileName.size() < 3) {
         std::cout << "Extensão do arquivo de saída não suportada (somente .o)" << "\n";
         return -1;
+    } else {
+        std::string outExt = outFileName.substr(outFileName.size() - 2);
+        if (outExt != ".o") {
+            std::cout << "Extensão do arquivo de saída não suportada (somente .o)" << "\n";
+            return -1;
+        }
     }
     
     // verifica se o arquivo de entrada existe
